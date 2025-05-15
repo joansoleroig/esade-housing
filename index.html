@@ -209,7 +209,7 @@
                         <input type="text" id="contactName" name="contactName" class="form-input" required>
                     </div>
                     <div class="mb-4">
-                        <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">joansole2001@gmail.com</label>
                         <input type="email" id="contactEmail" name="contactEmail" class="form-input" required>
                     </div>
                     <div class="mb-4">
@@ -230,9 +230,8 @@
                         Send Inquiry via Email
                     </button>
                 </form>
-                 <p class="text-center text-sm mt-4">Alternatively, call/WhatsApp: <a id="contactPhoneNumber" href="tel:+34600123456" class="font-semibold text-blue-600 hover:text-blue-700 hover:underline">+34 600 123 456</a></p>
+                 <p class="text-center text-sm mt-4">Alternatively, call/WhatsApp: <a id="contactPhoneNumber" href="tel:+34659098668" class="font-semibold text-blue-600 hover:text-blue-700 hover:underline">+34 659 09 86 68</a></p>
             </div>
-             <p class="mt-8 text-center text-sm text-blue-200"><em>(Owner: Remember to replace placeholder email and phone number in the script with your actual contact details.)</em></p>
         </div>
     </section>
 
@@ -291,12 +290,9 @@
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // --- CONFIGURATION ---
-        // !!! OWNER: REPLACE THIS EMAIL AND PHONE NUMBER WITH YOUR ACTUAL DETAILS !!!
-        const ownerEmail = 'joan.student.rentals.bcn@example.com'; 
-        const ownerPhone = '+34600123456'; 
+        const ownerEmail = 'joansole2001@gmail.com'; 
+        const ownerPhone = '+34659098668'; 
 
-        // Update contact phone number link on the page
         const contactPhoneNumberElement = document.getElementById('contactPhoneNumber');
         if (contactPhoneNumberElement) {
             contactPhoneNumberElement.href = `tel:${ownerPhone}`;
