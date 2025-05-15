@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rooms in Sagrada Família, Barcelona</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80'); /* Replace with your best hero image */
+            background-size: cover;
+            background-position: center;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+        }
+        .modal.active {
+            display: flex;
+        }
+        /* Basic form styling */
+        .form-input, .form-textarea {
+            @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Sagrada Student Stays</h1>
+            <nav>
+                <a href="#rooms" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Rooms</a>
+                <a href="#location" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Location</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg h-[calc(100vh-68px)] text-white">
+        <div class="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-center p-6">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Live Your Best Student Life in Barcelona!</h2>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl">Bright & Modern 3-Bedroom Apartment in Sagrada Família – Individual Rooms Available for Pre-Booking!</p>
+            <a href="#rooms" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">Explore Rooms</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-800 mb-3 text-center">Welcome to Your New Home</h3>
+            <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+                This charming and luminous apartment, perfectly located on Calle del Rosselló (near Lepant) in the sought-after Sagrada Família neighborhood, offers an ideal base for your studies and city adventures.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1501870190084-627f457743f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Modern Apartment Interior" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div>
+                    <p class="text-gray-700 mb-4">With 70 m² of well-distributed usable space, this apartment is designed for comfortable shared living. Enjoy abundant natural light throughout the day thanks to its exterior position and east orientation. Situated on the 5th floor of a well-maintained building (built in 1951) with an elevator.</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+                        <li><span class="font-semibold">Spacious Shared Living:</span> Large, welcoming living and dining area (approx. 20m²).</li>
+                        <li><span class="font-semibold">Private Bedrooms:</span> Three cozy and private bedrooms.</li>
+                        <li><span class="font-semibold">Shared Bathroom:</span> One modern, shared bathroom with shower.</li>
+                        <li><span class="font-semibold">Functional Kitchen:</span> Equipped with fridge/freezer, oven, hob, microwave, and washing machine.</li>
+                        <li><span class="font-semibold">Prime Location:</span> Unbeatable access to transport (Metro L2/L5 Sagrada Família) and shops.</li>
+                        <li><span class="font-semibold">Ready to Go:</span> Good condition, recently painted, ready for move-in.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center">Choose Your Perfect Room</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Room 1 - The Sunrise Room" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">The Sunrise Room</h4>
+                    <p class="text-gray-600 text-sm mb-1 flex-grow">Bright exterior room (approx. 12m²) with morning light. Furnished with a double bed, large wardrobe, and study desk with chair. Ideal for students seeking a quiet and spacious study haven.</p>
+                    <p class="text-gray-500 text-xs mb-3"><em>12 months contract required.</em></p>
+                    <p class="text-2xl font-bold text-gray-800 mb-4">900€/month<span class="text-sm font-normal text-gray-500"> + utilities</span></p>
+                    <button onclick="openModal('The Sunrise Room', '900€/month')" class="mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Pre-Book Room 1</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Room 2 - The Urban Nest" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">The Urban Nest</h4>
+                    <p class="text-gray-600 text-sm mb-1 flex-grow">Comfortable interior room (approx. 10m²), perfect as your personal retreat. Furnished with a single bed (convertible to double), wardrobe, and study desk. Great for focused study.</p>
+                    <p class="text-gray-500 text-xs mb-3"><em>12 months contract required.</em></p>
+                    <p class="text-2xl font-bold text-gray-800 mb-4">900€/month<span class="text-sm font-normal text-gray-500"> + utilities</span></p>
+                    <button onclick="openModal('The Urban Nest', '900€/month')" class="mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Pre-Book Room 2</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Room 3 - The Study Haven" class="rounded-md mb-4 w-full h-48 object-cover">
+                    <h4 class="text-xl font-semibold text-blue-700 mb-2">The Study Haven</h4>
+                    <p class="text-gray-600 text-sm mb-1 flex-grow">Cozy interior room (approx. 8m²). Furnished with a single bed, chest of drawers, and a compact study desk. Perfect for those who need a quiet, dedicated study space.</p>
+                    <p class="text-gray-500 text-xs mb-3"><em>12 months contract required.</em></p>
+                    <p class="text-2xl font-bold text-gray-800 mb-4">750€/month<span class="text-sm font-normal text-gray-500"> + utilities</span></p>
+                    <button onclick="openModal('The Study Haven', '750€/month')" class="mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Pre-Book Room 3</button>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <h5 class="text-xl font-semibold text-gray-700 mb-3">Shared Amenities for All Residents:</h5>
+                <ul class="list-none text-gray-600 space-y-1 inline-block text-left">
+                    <li>✓ Spacious living and dining area</li>
+                    <li>✓ Fully equipped kitchen (fridge, oven, hob, microwave, washing machine)</li>
+                    <li>✓ Modern shared bathroom with shower</li>
+                    <li>✓ Elevator access</li>
+                    <li>✓ High-Speed Fiber Optic Wi-Fi (600Mbps)</li>
+                    <li>✓ Study desks provided in each room</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center">Why Live Here?</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <svg class="w-12 h-12 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Live Like a Local</h4>
+                    <p class="text-gray-600 text-sm">Experience authentic Barcelona life in the famous Sagrada Família district, surrounded by local charm.</p>
+                </div>
+                <div class="p-6">
+                     <svg class="w-12 h-12 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Unbeatable Convenience</h4>
+                    <p class="text-gray-600 text-sm">Steps from Sagrada Família Metro (L2/L5), connecting to UB, UPF, EAE & other universities easily.</p>
+                </div>
+                <div class="p-6">
+                    <svg class="w-12 h-12 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Comfort & Style</h4>
+                    <p class="text-gray-600 text-sm">A bright, well-maintained apartment with an elevator for a comfortable and secure student stay.</p>
+                </div>
+                 <div class="p-6 md:col-span-1 lg:col-auto">
+                    <svg class="w-12 h-12 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Student Community</h4>
+                    <p class="text-gray-600 text-sm">Share your Barcelona journey with fellow students in a friendly, respectful, and international atmosphere.</p>
+                </div>
+                <div class="p-6 md:col-span-1 lg:col-auto">
+                    <svg class="w-12 h-12 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Move-In Ready</h4>
+                    <p class="text-gray-600 text-sm">Settle in quickly with all essentials provided and start exploring the vibrant city of Barcelona!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-12 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-800 mb-10 text-center">Apartment Gallery</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 1 - Living Area" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 2 - Kitchen" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 3 - Bedroom Example" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 4 - Another Bedroom" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 5 - Bathroom" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12f4e38138?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 6 - Detail" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 7 - Building Exterior (Example)" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 8 - Common Area" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 9 - Study Desk Setup" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Gallery Image 10 - View from Window (Example)" class="rounded-lg shadow-md w-full h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openImageModal(this.src)">
+            </div>
+            <p class="text-center text-gray-600 mt-4 text-sm"><em>Please note: Images are illustrative. Replace with your actual photos. The original listing mentions 18 photos.</em></p>
+        </div>
+    </section>
+
+    <section id="location" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-800 mb-3 text-center">Prime Barcelona Location</h3>
+            <p class="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
+                Calle del Rosselló, La Sagrada Família, Eixample, Barcelona.
+                <br><span class="text-sm">(Exact building number provided to serious applicants for privacy).</span>
+            </p>
+            <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-xl overflow-hidden">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.833831298988!2d2.172069815382925!3d41.40362997926229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2d6b2b2db25%3A0x5526c358a2686889!2sCarrer%20del%20Rossell%C3%B3%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1678886520000!5m2!1sen!2ses"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="text-gray-700 mt-8 text-center">
+                Explore the neighborhood! You're just a short walk from Gaudí's magnificent Sagrada Família, beautiful parks like Plaça de Gaudí, bustling markets (Mercat de la Sagrada Família), and countless cafes and restaurants.
+                <br>Excellent transport links: Sagrada Família Metro (L2 & L5) provides direct access to Universitat de Barcelona (UB), Universitat Pompeu Fabra (UPF), and other key city locations. Various bus lines also serve the area.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-12 md:py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-10 text-center">Contact Us or Pre-Book</h3>
+            <div class="max-w-xl mx-auto bg-white text-gray-700 p-8 rounded-lg shadow-2xl">
+                <form id="contactForm">
+                    <p class="mb-6 text-center">
+                        Interested in a room or have questions? Fill out the form below or use the pre-book buttons under each room.
+                        Rooms require a 12-month contract.
+                    </p>
+                    <div class="mb-4">
+                        <label for="contactName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="contactName" name="contactName" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" class="form-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contactRoom" class="block text-sm font-medium text-gray-700 mb-1">Room of Interest (Optional)</label>
+                        <select id="contactRoom" name="contactRoom" class="form-input">
+                            <option value="">Select a room...</option>
+                            <option value="The Sunrise Room">The Sunrise Room (900€)</option>
+                            <option value="The Urban Nest">The Urban Nest (900€)</option>
+                            <option value="The Study Haven">The Study Haven (750€)</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="contactMessage" class="block text-sm font-medium text-gray-700 mb-1">Message / Preferred Move-in Date</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="4" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300">
+                        Send Inquiry via Email
+                    </button>
+                </form>
+                 <p class="text-center text-sm mt-4">Alternatively, call/WhatsApp: <a id="contactPhoneNumber" href="tel:+34600123456" class="font-semibold text-blue-600 hover:text-blue-700 hover:underline">+34 600 123 456</a></p>
+            </div>
+             <p class="mt-8 text-center text-sm text-blue-200"><em>(Owner: Remember to replace placeholder email and phone number in the script with your actual contact details.)</em></p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>© <span id="currentYear"></span> Sagrada Student Stays. All Rights Reserved.</p>
+            <p class="text-sm">Property originally listed for sale by GAUDI HOUSE (AICAT 3978). Adapted for student rental by Joan.</p>
+        </div>
+    </footer>
+
+    <div id="prebookModal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 items-center justify-center p-4 z-50">
+        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h4 class="text-2xl font-bold text-blue-700">Pre-Book Room</h4>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl leading-none">×</button>
+            </div>
+            <form id="prebookForm">
+                <p class="text-gray-700 mb-2">You are interested in pre-booking:</p>
+                <p class="text-xl font-semibold text-gray-800 mb-1" id="modalRoomName"></p>
+                <p class="text-lg font-medium text-gray-700 mb-1" id="modalRoomPrice"></p>
+                <p class="text-gray-600 text-sm mb-4"><em>12 months contract required.</em></p>
+                
+                <div class="mb-4">
+                    <label for="modalUserName" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                    <input type="text" id="modalUserName" name="modalUserName" class="form-input" placeholder="Joan Doe" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modalUserEmail" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                    <input type="email" id="modalUserEmail" name="modalUserEmail" class="form-input" placeholder="you@example.com" required>
+                </div>
+                 <div class="mb-6">
+                    <label for="modalMoveInDate" class="block text-sm font-medium text-gray-700 mb-1">Preferred Move-in Date (approx.)</label>
+                    <input type="text" id="modalMoveInDate" name="modalMoveInDate" class="form-input" placeholder="e.g., September 1st, 2025">
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 mb-2">
+                    Submit Pre-Booking Request
+                </button>
+                <button type="button" onclick="closeModal()" class="w-full block text-center bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg transition duration-300">
+                    Cancel
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="imageModal" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center p-4 z-[60]">
+        <div class="relative">
+            <button onclick="closeImageModal()" class="absolute -top-2 -right-2 md:-top-4 md:-right-4 text-white bg-red-600 hover:bg-red-700 rounded-full p-1 w-8 h-8 flex items-center justify-center text-xl leading-none z-10">
+                ×
+            </button>
+            <img id="modalImageSrc" src="" alt="Full-size view" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl">
+        </div>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // --- CONFIGURATION ---
+        // !!! OWNER: REPLACE THIS EMAIL AND PHONE NUMBER WITH YOUR ACTUAL DETAILS !!!
+        const ownerEmail = 'joan.student.rentals.bcn@example.com'; 
+        const ownerPhone = '+34600123456'; 
+
+        // Update contact phone number link on the page
+        const contactPhoneNumberElement = document.getElementById('contactPhoneNumber');
+        if (contactPhoneNumberElement) {
+            contactPhoneNumberElement.href = `tel:${ownerPhone}`;
+            contactPhoneNumberElement.textContent = ownerPhone;
+        }
+
+        // --- PRE-BOOKING MODAL ---
+        const prebookModal = document.getElementById('prebookModal');
+        const modalRoomNameElement = document.getElementById('modalRoomName');
+        const modalRoomPriceElement = document.getElementById('modalRoomPrice');
+        const prebookForm = document.getElementById('prebookForm');
+        let currentModalRoomName = ''; // To store the room name for the modal form
+
+        function openModal(roomName, roomPrice) {
+            currentModalRoomName = roomName; // Store for form submission
+            modalRoomNameElement.textContent = roomName;
+            modalRoomPriceElement.textContent = `Price: ${roomPrice}`;
+            document.getElementById('modalUserName').value = ''; // Clear previous input
+            document.getElementById('modalUserEmail').value = ''; // Clear previous input
+            document.getElementById('modalMoveInDate').value = ''; // Clear previous input
+            prebookModal.classList.add('active');
+            document.getElementById('modalUserName').focus(); // Focus on the first input field
+        }
+
+        function closeModal() {
+            prebookModal.classList.remove('active');
+        }
+
+        if (prebookForm) {
+            prebookForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                const userName = document.getElementById('modalUserName').value;
+                const userEmail = document.getElementById('modalUserEmail').value;
+                const moveInDate = document.getElementById('modalMoveInDate').value;
+                const roomPrice = modalRoomPriceElement.textContent.replace('Price: ', '');
+
+                const subject = `Pre-booking Inquiry: ${currentModalRoomName} - Sagrada Student Stays`;
+                let body = `Hello,\n\nI would like to pre-book ${currentModalRoomName} at ${roomPrice} (12-month contract).\n\n`;
+                body += `Name: ${userName}\n`;
+                body += `Email: ${userEmail}\n`;
+                if (moveInDate) {
+                    body += `Preferred Move-in Date: ${moveInDate}\n`;
+                }
+                body += `\nPlease let me know the next steps.\n\nBest regards,\n${userName}`;
+                
+                window.location.href = `mailto:${ownerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                closeModal();
+            });
+        }
+        
+        // Close modal if clicked outside content
+        prebookModal.addEventListener('click', function(event) {
+            if (event.target === prebookModal) {
+                closeModal();
+            }
+        });
+
+        // --- CONTACT FORM (IN PAGE) ---
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                const contactName = document.getElementById('contactName').value;
+                const contactEmail = document.getElementById('contactEmail').value;
+                const contactRoom = document.getElementById('contactRoom').value;
+                const contactMessage = document.getElementById('contactMessage').value;
+
+                const subject = `Inquiry from Sagrada Student Stays Website - ${contactRoom || 'General Inquiry'}`;
+                let body = `Inquiry from: ${contactName} (${contactEmail})\n`;
+                if (contactRoom) {
+                    body += `Room of Interest: ${contactRoom}\n`;
+                }
+                body += `\nMessage:\n${contactMessage}\n`;
+                
+                window.location.href = `mailto:${ownerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                // Optionally, clear the form or show a success message here
+                contactForm.reset(); 
+                alert('Your inquiry has been prepared in your email client. Please send it from there.');
+            });
+        }
+
+        // --- IMAGE LIGHTBOX MODAL ---
+        const imageModal = document.getElementById('imageModal');
+        const modalImageSrc = document.getElementById('modalImageSrc');
+
+        function openImageModal(src) {
+            modalImageSrc.src = src;
+            imageModal.classList.add('active');
+        }
+
+        function closeImageModal() {
+            imageModal.classList.remove('active');
+            modalImageSrc.src = ""; // Clear src to prevent loading issues
+        }
+        
+        imageModal.addEventListener('click', function(event) {
+            if (event.target === imageModal) { 
+                closeImageModal();
+            }
+        });
+
+        // --- GENERAL MODAL KEYDOWN LISTENER ---
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                if (prebookModal.classList.contains('active')) {
+                    closeModal();
+                }
+                if (imageModal.classList.contains('active')) {
+                    closeImageModal();
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>
